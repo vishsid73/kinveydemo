@@ -1,0 +1,39 @@
+<!--
+		===========================================================
+		BEGIN PAGE
+		===========================================================
+		-->
+
+<div class="login-wrapper">
+    <!-- <div class="alert alert-warning alert-bold-border fade in alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			  <strong>Warning!</strong> Better check yourself, you're <a href="#fakelink" class="alert-link">not looking too good</a>.
+			</div> -->
+
+    <form role="form" name="loginForm" novalidate>
+        <div class="form-group has-feedback lg left-feedback no-label">
+            <input id="login-email" type="email" name="email" class="form-control no-border input-lg rounded" ng-class="{'error-style': submittedEmail}" placeholder="abc@xyz.com" autofocus ng-model="username" required>
+            <span class="fa fa-user form-control-feedback"></span>
+            <span class="login" id="login-span"  ng-show="submittedEmail">A valid email address is required.</span>
+        </div>
+        <div class="form-group has-feedback lg left-feedback no-label">
+
+            <input id="login-password" type="password" name="password" class="form-control no-border input-lg rounded" ng-class="{'error-style': submittedPassword}" placeholder="Enter password" ng-model="password" required>
+            <span class="fa fa-unlock-alt form-control-feedback"></span>
+            <span class="login" ng-show="submittedPassword">A password is required.</span>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-warning btn-lg btn-perspective btn-block" ng-click="login()">LOGIN</button>
+        </div>
+        <span class="error" ng-show="submittedError" style="display: block; color:red; text-align: center">{{errorDescription}}</span>
+    </form>
+    <p class="text-center"><strong><a ng-href="#/partials/password_reset">Forgot your password?</a></strong></p>
+    <p class="text-center">or</p>
+    <p class="text-center"><strong><a ng-href="#/partials/sign_up">Create new account</a></strong></p>
+</div><!-- /.login-wrapper -->
+<!--
+===========================================================
+END PAGE
+===========================================================
+-->

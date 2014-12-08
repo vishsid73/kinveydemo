@@ -1,0 +1,59 @@
+
+<link rel="stylesheet" href="assets/angular/angular-chart.css">
+
+
+
+<div class="container-fluid">
+    <!-- Begin page heading -->
+    <h1 class="page-heading">Wally Expense <small>Kinvey CRUD Demo App </small></h1>
+    <!-- End page heading -->
+
+    <div class="well well-sm col-xs-12">
+         <form class="form-horizontal">
+             <div class="form-group row col-md-3">
+
+                     <input type="text" name="desc" class="form-control no-border input-sm rounded" placeholder="Description" ng-model="desc" placeholder="Description" required autofocus>
+
+             </div>
+             <div class="col-md-3">
+
+                 <input type="number" name="amount" class="form-control no-border input-sm rounded" ng-model="amount" placeholder="Amount" required>
+
+             </div>
+             <div class="col-md-3">
+
+                 <!--<input type="text" class="form-control no-border input-sm rounded datepicker" data-date-format="dd-mm-yyyy" ng-model="date" placeholder="dd-mm-yyyy" required>-->
+                 <input type="text" class="form-control no-border input-sm rounded " placeholder="dd-mm-yyyy" ng-model="date" required>
+
+
+             </div>
+             <div class="col-md-3">
+                 <button class="btn btn-primary btn-sm" ng-click="save()">Save</button>
+             </div>
+         </form>
+    </div>
+    <!--<style type="text/css">-->
+
+        <!--.chart {-->
+            <!--width: 500px;-->
+            <!--height: 300px;-->
+        <!--}-->
+    <!--</style>-->
+
+        <div class="col-md-12">
+        <!--<div class="the-box">-->
+            <!--<h4 class="small-title">MORRIS LINE</h4>-->
+            <!--<div id="morris-line-example" style="height: 250px;"></div>-->
+        <!--</div>&lt;!&ndash; .the-box &ndash;&gt;-->
+
+            <!--<div ac-chart="chartType" ac-data="datach" ac-config="configch" id='chart' class='chart'></div>-->
+            <canvas id="line" class="chart chart-line" data="data"
+                    labels="labels" legend="true" series="series"
+                    click="onClick">
+            </canvas>
+        </div>
+
+
+
+
+</div><!-- /.container-fluid -->
